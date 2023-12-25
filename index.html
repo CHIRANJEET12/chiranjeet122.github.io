@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>STREET MAP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Roboto+Condensed:wght@700&family=Skranji&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url(/bg2.jpg);
+            animation: moveBackground 20s linear infinite;
+            /* background: linear-gradient(45deg, #3498db, #2ecc71); */
+        }
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 3px;
+            border-radius: 9px;
+            height: 3px;
+            background-color: #ffffff;
+            animation: shootingStar 2s linear infinite;
+        }
+
+        .shooting-star:nth-child(2) {
+            width: 4px;
+            top: 0;
+            border-radius: 9px;
+            right: 330;
+            height: 4px;
+            animation-duration: 3s;
+        }
+
+        .shooting-star:nth-child(3) {
+            width: 2px;
+            height: 2px;
+            border-radius: 9px;
+            animation-duration: 2.5s;
+        }
+
+        .shooting-star:nth-child(4) {
+            width: 3px;
+            border-radius: 9px;
+            height: 3px;
+            animation-duration: 2.2s;
+        }
+
+        .shooting-star:nth-child(5) {
+            width: 2.5px;
+            height: 2.5px;
+            border-radius: 9px;
+            animation-duration: 2.8s;
+        }
+
+        .shooting-star:nth-child(6) {
+            width: 3.5px;
+            border-radius: 9px;
+            height: 3.5px;
+            animation-duration: 3.5s;
+        }
+
+        .shooting-star:nth-child(7) {
+            width: 2px;
+            height: 2px;
+            border-radius: 9px;
+            animation-duration: 2.7s;
+        }
+
+        .shooting-star:nth-child(8) {
+            width: 3.5px;
+            border-radius: 9px;
+            height: 3.5px;
+            animation-duration: 2.9s;
+        }
+
+        .shooting-star:nth-child(9) {
+            width: 2.5px;
+            height: 2.5px;
+            border-radius: 9px;
+            animation-duration: 3.2s;
+        }
+
+        .shooting-star:nth-child(10) {
+            width: 3px;
+            border-radius: 9px;
+            height: 3px;
+            animation-duration: 3.3s;
+        }
+
+
+        @keyframes shootingStar {
+            0% {
+                transform: translate(0, 0) scale(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+                transform: translate(15vw, -20vh) scale(1);
+            }
+
+            90% {
+                opacity: 0.8;
+                transform: translate(85vw, -80vh) scale(4);
+            }
+
+            100% {
+                transform: translate(100vw, -100vh) scale(4);
+                opacity: 0;
+            }
+        }
+
+
+        .nav {
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            margin: 14px -8px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: rgba(0, 0, 0, 0.358);
+            height: 100px;
+        }
+
+        .oo {
+            margin: 0px 56px 0px;
+        }
+
+        .sm {
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            margin: -67px 128px 0px;
+            padding: 4px 91px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            border-radius: 44px;
+            background-color: rgb(242, 255, 55);
+            width: 10%;
+            box-shadow: 3px 4px 5px rgb(80, 203, 255);
+        }
+
+        .bar {
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            margin: -53px 605px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            border-radius: 44px;
+
+            /* background-color: rgb(55, 255, 88); */
+            width: 10%;
+            /* box-shadow: 3px 4px 5px rgb(80, 203, 255); */
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -65px 182px 0px;
+        }
+
+
+        nav ul li {
+            list-style: none;
+            margin: 0 44px;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 7px 13px;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 3px;
+            transition: 0.4s;
+            color: rgb(230, 208, 42);
+            box-shadow: 0px 0px 11px rgb(18, 255, 149);
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 2.2rem;
+            padding: 7px 3px;
+            transition: 0.4s;
+            background: rgb(31, 255, 139);
+            box-shadow: 3px 4px 35px rgb(255, 0, 157);
+        }
+
+        .home {
+            text-decoration: none;
+            color: rgb(65, 255, 103);
+            list-style: none;
+            margin: 0px 0px 0px;
+            font-size: 2.3rem;
+        }
+
+        .me {
+            color: rgb(47, 255, 123);
+        }
+
+        .aa {
+            color: rgb(107, 255, 117);
+        }
+
+        .po {
+            margin: 148px 86px 0px;
+        }
+
+        .back {
+            font-size: 3.4rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(116, 255, 97);
+            margin: 0px 0px 0px;
+            width: 40%;
+        }
+
+        .three {
+            font-size: 1.7rem;
+            margin: 0px 0px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(255, 255, 255);
+            width: 40%;
+
+        }
+
+        hr {
+            width: 40%;
+            margin: 0px 0px 0px;
+        }
+
+        .pop {
+            margin: -293px 821px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            width: 30%;
+            color: #58ff76;
+            background-color: rgba(0, 0, 0, 0.662);
+            background-size: 50%;
+            transition: 0.4s;
+            border-radius: 2px;
+            box-shadow: 3px 4px 35px rgb(123, 215, 255);;
+        }
+        .pop:hover {
+            margin: -293px 851px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            width: 30%;
+            color: #58ff76;
+            background-color: rgba(0, 0, 0, 0.662);
+            background-size: 50%;
+            transition: 0.4s;
+            font-size: 1.2rem;
+            border-radius: 2px;
+            box-shadow: 3px 4px 35px rgb(100, 255, 113);;
+        }
+    .fan{
+        margin: -193px 821px 0px;
+            font-family: 'Roboto Condensed', sans-serif;
+            width: 30%;
+            color: #fafafa;
+            /* background-color: rgb(255, 0, 0); */
+            background-size: 50%;
+            border-radius: 42px;
+    }
+    .rod{
+        color: #58ff76;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-animation"></div>
+    <!-- Your website content goes here -->
+    <header>
+        <nav>
+            <div class="nav">
+                <span class="oo"><img src="/Screenshot 2023-12-23 150650.png" alt="" width="190px" height="90px"></span>
+            </div>
+
+            <div class="bar">
+                <ul>
+                    <li><a class="home" href="/INDEX.html">HOME</a></li>
+                    <li><a class="aa" href="/roadmap.html">ROADMAP</a></li>
+                    <li><a class="me" href="/contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="po">
+        <div class="back">
+
+            "Unified Domain <br>Navigation." </div> <br>
+        <hr>
+        <div class="three">
+            "Navigate every domain effortlessly <br> with our holistic tree roadmap app."</div>
+        <br>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </section>
+
+    <div class="pop">
+
+        "Explore all domains seamlessly with our app's comprehensive tree roadmap,
+        <br> simplifying information access for a smoother journey."
+        <br>
+
+       <span class="fan"> <span class="rod">Effortless Navigation:</span> Simplify your exploration across domains with our user-friendly tree roadmap.
+        <br>
+        <span class="rod">Holistic Insights:</span> Gain comprehensive overviews of diverse domains, fostering deeper understanding.
+<br>
+        <span class="rod">Time-Efficient Learning:</span> Optimize your learning journey with tailored roadmaps, saving you valuable time.</span>
+    </div>
+
+
+</body>
+
+</html>
